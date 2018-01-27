@@ -2,11 +2,11 @@
   <%= f.error_notification %>
 
   <div class="form-group">
-    <%= f.input :title %>
-    <%= f.input :description %>
+    <%= f.input :title, class: "form-control" %>
+    <%= f.input :description, :input_html => {:style => 'width: 100%', :rows => 7, class: 'form-control'} %>
   </div>
 
   <div class="form-group">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-primary" %>
   </div>
 <% end %>
