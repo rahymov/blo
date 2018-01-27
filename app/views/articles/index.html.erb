@@ -1,7 +1,11 @@
 <div class="container">
-  <div class="row">
-    <% @articles.each do |article| %>
-      <h1><%=link_to article.title, article %></h1> 
-    <% end %>
+  <div class="row"> 
+  	<div class="col-md-6 col-md-offset-3">
+	  	<% @articles.each do |article| %>
+	  		<div class="well well-lg center animated shake">
+		      <h1 class="animated swing" id="article_title"><%=link_to article.title, article %></h1>
+		    </div>  
+		  <% end %>
+		</div>
   </div>
 </div>

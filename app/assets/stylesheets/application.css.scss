@@ -17,6 +17,13 @@
 @import "bootstrap";
 
 
+html {
+    zoom: 1; /* Old IE only */
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
 #logo
 {
 	color: white;
@@ -91,4 +98,16 @@
 .container .row h1 > a 
 {
 	text-decoration: none;
+}
+.well
+{
+	background-color: #0495BE;
+}
+.container .row h1 > a
+{
+	color: white;
+	&:hover
+	{
+		color: #022F3C;
+	}
 }

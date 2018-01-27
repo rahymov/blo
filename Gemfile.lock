@@ -40,6 +40,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    animate-rails (1.0.10)
+      rails
     arel (8.0.0)
     autoprefixer-rails (7.2.5)
       execjs
@@ -187,6 +189,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  animate-rails (~> 1.0, >= 1.0.10)
   bootstrap-sass (~> 3.3, >= 3.3.7)
   byebug
   capybara (~> 2.13)
