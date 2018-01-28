@@ -60,6 +60,10 @@ html {
 	background-image: asset-url("blog.jpg");
 	background-size: cover;
 	width: 100%;
+	a
+	{
+		color: white;
+	}
 	.display-3{
 		color: white;
 		letter-spacing: 1;
