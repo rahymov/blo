@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   
-	before_action :find_params
+	before_action :find_params, only: [:show, :edit, :update, :destroy]
 
   def new
   	@user = User.new
@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   		redirect_to articles_path
   	else
   		render 'new'
+  	end
   end
 
   def edit
@@ -23,6 +24,11 @@ class UsersController < ApplicationController
   		redirect_to articles_path
   	else
   		render 'edit'
+  	end
+  end
+
+  def show
+  	
   end
 
   def destroy

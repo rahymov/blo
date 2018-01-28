@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row"> 
+  	<div class="col-md-6 col-md-offset-3">
+	  	<% obj.each do |article| %>
+	  		<div class="well well-lg center animated shake">
+		      <h1 class="animated swing" id="article_title"><%=link_to article.title, article %></h1>
+		      
+		      <div class="article-details">
+		      	<small>
+			      	Created by: <%= article.user.username %>, 
+							<%= time_ago_in_words(article.created_at) %> ago
+			      </small>
+		      </div>
+		    </div>  
+		  <% end %>
+		</div>
+  </div>
+</div>

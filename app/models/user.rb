@@ -1,6 +1,9 @@
 class User < ApplicationRecord
 	
 	has_many :articles
+	include Gravtastic
+  gravtastic
+  
 	before_save { self.email = email.downcase }
 	has_secure_password
 
@@ -15,5 +18,7 @@ class User < ApplicationRecord
 						uniqueness: {case_sensitive: false},
 						format: {with: VALID_EMAIL_REGEX }
 	validates :password, presence: true
+
+
 
 end
