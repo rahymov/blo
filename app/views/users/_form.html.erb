@@ -1,0 +1,13 @@
+<%= simple_form_for(@user) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-group">
+    <%= f.input :username, class: "form-control", placeholder: "Enter username" %>
+    <%= f.input :email, class: 'form-control', placeholder: "Enter email" %>
+    <%= f.input :password, class: 'form-control', placeholder: "Enter password" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit(@user.new_record? ? "Sign Up" : "Update" , class: "btn btn-primary") %>
+  </div>
+<% end %>
