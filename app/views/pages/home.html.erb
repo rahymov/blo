@@ -1,7 +1,10 @@
 <div class="col-md-9 col-md-offset-1">
 	<div class="jumbotron center">
 	  <h1 class="display-3">Blog</h1>
-	  	<%= link_to "Sign Up", root_path, class: "btn btn-primary btn-lg" %>
+	  	<% if !logged_in? %>
+	  		<%= link_to "Sign Up", signup_path, class: "btn btn-primary btn-lg" %>
+	  		<h1>Welcome</h1>
+	  	<% end %>
 	  <hr class="my-3">
 	</div>
 </div>
