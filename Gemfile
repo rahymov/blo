@@ -22,6 +22,8 @@ gem 'simple_form', '~> 3.5'
 gem 'animate-rails', '~> 1.0', '>= 1.0.10'
 gem 'bcrypt', '~> 3.1', '>= 3.1.11'
 gem 'gravtastic', '~> 3.2', '>= 3.2.6'
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+gem 'bootstrap-will_paginate', '~> 1.0'
 
 
 group :development, :test do
