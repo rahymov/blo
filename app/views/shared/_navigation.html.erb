@@ -6,10 +6,20 @@
 				<li><%= link_to "Articles", articles_path  %></li>
 				<li><%= link_to "New Article", new_article_path %></li>
 				<li><%= link_to "About", about_path %></li>
+				<li><%= link_to "Users", users_path %></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<% if logged_in? %>
 					<li><%= link_to "Logout", logout_path, method: :delete %></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Your Profile 
+        		</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<li><%= link_to "Edit Your Profile", edit_user_path(current_user), class: "dropdown-item" %></li>
+							<li><%= link_to "View Profile", user_path(current_user), class: "dropdown-item" %></li>
+						</>
+					</li>
 				<% else %>
 					<li><%= link_to "Login", login_path %></li>
 					<li><%= link_to "Signup", signup_path %></li>

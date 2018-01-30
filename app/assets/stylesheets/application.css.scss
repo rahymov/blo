@@ -49,11 +49,16 @@ html {
 }
 .navbar-default .navbar-nav > li > a {
     color: #022F3C;
+    font-size: 18px;
     &:hover{
     	color: #EBFAFF;
-    	font-size: 20px;
+    	font-size: 24px;
     	font-family: 'Gloria Hallelujah', cursive;
     }
+}
+.dropdown-menu > li > a
+{
+	font-family: 'Gloria Hallelujah', cursive;
 }
 .center{
 	text-align: center;
