@@ -13,7 +13,7 @@
 					<li><%= link_to "Logout", logout_path, method: :delete %></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Your Profile 
+          Your Profile <%= "Admin" if current_user.admin? %>
         		</a>
 						<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 							<li><%= link_to "Edit Your Profile", edit_user_path(current_user), class: "dropdown-item" %></li>

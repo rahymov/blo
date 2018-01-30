@@ -9,7 +9,10 @@
 				<div class="well col-md-4 col-md-offset-4">
 					<%= link_to avatar_url(user),user_path(user) %> <br>
 						<%= link_to user.username, user_path(user) %> <br>
-					<small><%= pluralize(user.articles.count, "article") if user.articles %></small>
+					<small><%= pluralize(user.articles.count, "article") if user.articles %></small> <br>
+					<% if logged_in? and current_user.admin? %>
+						<%= link_to "Delete User", users_path(user), method: :delete, data: { confirm: "Are you sure?" } ,class: "btn btn-danger" %>
+					<% end %>
 				</div>
 			</div>
 		</ul>

@@ -16,7 +16,7 @@
 		  <strong>Description:</strong>
 		  <%= @article.description %>
 		</p>
-		<% if logged_in? && current_user == @article.user %>
+		<% if logged_in? && (current_user == @article.user || current_user.admin?) %>
 		<div class="btn-group">
 			<%= link_to 'Edit', edit_article_path(@article), class: "btn btn-success" %>
 			<%= link_to "Delete", articles_path, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
