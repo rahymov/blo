@@ -4,8 +4,11 @@
   <div class="form-group">
     <%= f.input :title, class: "form-control" %>
     <%= f.input :description, :input_html => {:style => 'width: 100%', :rows => 7, class: 'form-control'} %>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name do |c| %>
+			<%= c.label(class: "check_box-inline form-check-input") {c.check_box(class: "check_box")} + "  " +  c.text + "   " %>
+    <% end %>
   </div>
-
+	
   <div class="form-group">
     <%= f.button :submit, class: "btn btn-primary" %>
   </div>

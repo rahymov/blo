@@ -11,17 +11,22 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require_categories
  *= require_self
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "categories";
 
 
-html {
-    zoom: 1; /* Old IE only */
-    -moz-transform: scale(1);
-    -webkit-transform: scale(1);
-    transform: scale(1);
+html 
+{
+  zoom: 1; /* Old IE only */
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+	position: relative;
+	min-height: 100%;
 }
 .container .well
 {
@@ -49,17 +54,21 @@ html {
 }
 .navbar-default .navbar-nav > li > a {
     color: #022F3C;
-    font-size: 18px;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 22px;
+    font-family: 'Neucha', cursive;
     &:hover{
     	color: #EBFAFF;
-    	font-size: 24px;
-    	font-family: 'Gloria Hallelujah', cursive;
+    	font-size: 20px;
+    	font-family: 'Neucha', cursive;
+    	background-color: black;
+	  	border: .3px solid;
+	  	border-radius: 10px;
     }
 }
 .dropdown-menu > li > a
 {
-	font-family: 'Gloria Hallelujah', cursive;
+	font-family: 'Neucha', cursive;
+	font-size: 18px;
 }
 .center{
 	text-align: center;
@@ -86,27 +95,22 @@ html {
 
 .homepage-footer{
 	padding-bottom: 0;
-	padding-top: 350px;
+	padding-top: 390px;
 	list-style-type: none;
 	text-decoration: none;
 
 }
 .footer-row
 {
-	line-height: 30px;
-	border: .01px solid #022F3C;
 	background-color: #4eb2f9;
-	color: white;
-	text-decoration: none;
-	padding-bottom: 7px;
-	a
-	{
-		color: #022F3C;
-	}
-	a:hover{
-		color: white;
-		text-decoration: none;
-	}
+  border-top: 1px solid #E7E7E7;
+  text-align:center;
+  padding:20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
 }
 .container .row h1 > a 
 {
@@ -123,4 +127,9 @@ html {
 	{
 		color: #022F3C;
 	}
+}
+
+.form-check-input .check_box-inline .check_box
+{
+	width: auto !important ;
 }

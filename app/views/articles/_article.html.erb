@@ -3,14 +3,22 @@
   	<div class="col-md-6 col-md-offset-3">
 	  	<% obj.each do |article| %>
 	  		<div class="well well-lg center animated swing">
-		      <h1 class="animated swing" id="article_title"><%=link_to article.title, article %></h1>
-		      
+		      <h1 class="animated swing" id="article_title"><%=link_to article.title, article %></h1>		      
 		      <div class="article-details">
 		      	<small>
 			      	Created by: <%= article.user.username %>, 
 							<%= time_ago_in_words(article.created_at) %> ago
 			      </small>
 		      </div>
+		    	<div>
+		    		<% if article.categories.any? %>
+							<p>Categories: <%= render article.categories %></p>
+		    		<% end %>
+		    		<% if logged_in? && (current_user == article.user || current_user.admin?) %>
+							<%= link_to "Edit Article", edit_article_path(article), class: "btn btn-success" %>
+							<%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure?"} ,class: "btn btn-danger" %>
+		    		<% end %>
+		    	</div>
 		    </div>  
 		  <% end %>
 		</div>
