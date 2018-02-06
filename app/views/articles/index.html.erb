@@ -1,7 +1,16 @@
-<div align="center">
-	<%= will_paginate  %>
-</div>
-<%= render 'article', obj: @articles %>
-<div align="center">
-	<%= will_paginate  %>
+<div class="row">
+	<div class="col-md-8">
+		<div align="left">
+			<%= will_paginate  %>
+		</div>
+		<div align="left" class="col-md-6">
+			<%= render 'article', obj: @articles %>
+		</div>
+		<div align="left">
+			<%= will_paginate  %>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<%= render "shared/sidebar" %>
+	</div>
 </div>
