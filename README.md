@@ -1,4 +1,4 @@
 # README
 	
 	## Web address
-* https://yar-blog.herokuapp.com/
+* https://rahymov-blog.herokuapp.com/
