@@ -37,14 +37,14 @@ html
 	color: white;
   font-size: 30px;
   font-weight: bold;
-  font-family: monica;
+  font-family: monica, sans-serif;
   
   &:hover 
   {
   	background-color: black;
   	border: .3px solid;
   	border-radius: 10px;
-		font-family: 'Berkshire Swash', cursive;
+		font-family: 'Berkshire Swash', cursive, sans-serif;
   }
 }
 .navbar-default 
@@ -55,12 +55,12 @@ html
 .navbar-default .navbar-nav > li > a {
     color: #022F3C;
     font-size: 22px;
-    font-family: 'Neucha', cursive;
+    font-family: 'Neucha', cursive, sans-serif;
     letter-spacing: 0.5px;
     &:hover{
     	color: #EBFAFF;
     	font-size: 20px;
-    	font-family: 'Neucha', cursive;
+    	font-family: 'Neucha', cursive, sans-serif;
     	background-color: black;
 	  	border: .3px solid;
 	  	border-radius: 10px;
@@ -68,7 +68,7 @@ html
 }
 .dropdown-menu > li > a
 {
-	font-family: 'Neucha', cursive;
+	font-family: 'Neucha', cursive, sans-serif;
 	font-size: 18px;
 	background-color: #b4c9ea;
 }
